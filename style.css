@@ -1,0 +1,122 @@
+:root {
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DarkCyan: hsl(184, 100%, 22%);
+  --VeryDarkCyan: hsl(179, 100%, 13%);
+  --Transparent-White: hsla(0, 0%, 100%, 0.75);
+  --VeryLightGray: hsl(0, 0%, 95%);
+  --ff-heading: "Big Shoulders Display";
+  --ff-base: "Lexend Deca";
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url(./assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url(./assets/fonts/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--VeryLightGray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: var(--ff-base);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 12px;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.box1 {
+  background: var(--BrightOrange);
+  & a {
+    color: var(--BrightOrange);
+  }
+}
+
+.box2 {
+  background: var(--DarkCyan);
+  & a {
+    color: var(--DarkCyan);
+  }
+}
+
+.box3 {
+  background: var(--VeryDarkCyan);
+  & a {
+    color: var(--VeryDarkCyan);
+  }
+}
+
+.box {
+  padding: 40px;
+  & h2 {
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    color: var(--VeryLightGray);
+    font-size: 30px;
+  }
+  & p {
+    color: var(--Transparent-White);
+    line-height: 1.6;
+  }
+  & a {
+    text-decoration: none;
+    background-color: var(--VeryLightGray);
+    padding: 13px 27px;
+    border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid var(--VeryLightGray);
+    transition: all 0.4s ease-in-out;
+  }
+  & a:hover {
+    color: var(--VeryLightGray);
+    background: transparent;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--BrightOrange);
+  & a{
+    color: var(--DarkCyan);
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    margin: 2rem 0.5rem;
+  }
+}
